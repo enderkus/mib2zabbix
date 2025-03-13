@@ -1,0 +1,1711 @@
+{
+  "zabbix_export": {
+    "version": "5.0",
+    "date": "2025-03-14T00:03:03Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices"
+      }
+    ],
+    "templates": [
+      {
+        "template": "Template CISCO-VDC-MIB",
+        "name": "Template CISCO-VDC-MIB",
+        "description": "Generated from MIB file: CISCO-VDC-MIB.mib",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "applications": [
+          {
+            "name": "CISCO-VDC-MIB"
+          }
+        ],
+        "items": [
+          {
+            "name": "ciscoVdcMaxNumberVdcAllowed",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcmaxnumbervdcallowed",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the maximum number of VDC instances that can be created in the device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcCombinedHostnameEnabled",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdccombinedhostnameenabled",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies whether the combined hostname functionality is enabled or not. When the combined hostname functionality is enabled, the hostname of non-default VDCs will be <default VDC name>-<nondefault VDC name>.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdctable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains entries representing a VDC instance. There will be an entry for each VDC instance created in the system.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "An entry representing the information pertaining to a virtual device instance. A peer SNMP entity may create a virtual device instance by setting an instance of ciscoVdcRowStatus to 'createAndWait' or 'createAndGo'. Observe that an implementation that does not support these options must specify these limitations in an agent capabilities statement. Other management entities (e.g., the local console) may perform actions resulting in the creation of a virtual device instance. In these cases, the system must automatically create a row in the ciscoVdcTable. A peer SNMP entity may destroy a virtual device instance by setting the corresponding instance of ciscoVdcRowStatus to 'destroy'. Observe that an implementation that does not support this option must specify this limitation in an agent capabilities statement. Other management entities may perform actions resulting in the destruction of a virtual device instance. In these cases, the system must automatically destroy the corresponding row in the ciscoVdcTable.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcId",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcid",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates an arbitrary integer-value that uniquely identifies a virtual device instance.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcName",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcname",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "The human-readable name of the VDC instance. This name uniquely identifies the VDC instance in the system.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcState",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcstate",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the current operational state of the virtual device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFcoeCapable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.4",
+            "key": "snmp.ciscovdcfcoecapable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the FCoE capabilities of the virtual device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcMac",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.5",
+            "key": "snmp.ciscovdcmac",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the router MAC address of the virtual device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSwitchId",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.6",
+            "key": "snmp.ciscovdcswitchid",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the MAC address of the device where the virtual device instance is created.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcRowStatus",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.7",
+            "key": "snmp.ciscovdcrowstatus",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object is used to create, modify, and/or delete a row in this table. In particular, a newly created row cannot be made active until the ciscoVdcName value is set. ciscoVdcName may not be modified while the value of this object is active(1). An attempt to set ciscoVdcName while the value of RowStatus is active(1) will result in an inconsistentValue error. Agent may delete any virtual device which has ciscoVdcState of active(1) and ciscoVdcRowStatus of Active.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcStorageType",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.8",
+            "key": "snmp.ciscovdcstoragetype",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the storage type for this conceptual row. The following columnar objects are allowed to be writable when the storageType of this conceptual row is permanent(4): none",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcExtTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcexttable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains additional information of a VDC instance. There will be an entry for each VDC instance created in the system.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcExtEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcextentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "Each row contains additional information of a VDC instance.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSingleSupHaPolicy",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcsinglesuphapolicy",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the High Availability policy of a particular VDC when there is only one supervisor on the device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcDualSupHaPolicy",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcdualsuphapolicy",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the High Availability policy of a particular VDC when both the active supervisor and standby supervisor are present on the device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcBootOrder",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcbootorder",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the boot order value for this particular VDC. The VDCs with the lowest boot order will boot first.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcTimeCreated",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.4",
+            "key": "snmp.ciscovdctimecreated",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the time at which a particular VDC was created.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcReloadCount",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.5",
+            "key": "snmp.ciscovdcreloadcount",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the number of times a particular VDC has been reloaded.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcRestartCount",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.6",
+            "key": "snmp.ciscovdcrestartcount",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the number of times a VDC identified by ciscoVdcId has been restarted.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcRestartTime",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.7",
+            "key": "snmp.ciscovdcrestarttime",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the most recent restart time of the VDC instance. This object contains value 0x0000010100000000 when the corresponding instance value of ciscoVdcRestartCount is '0'.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcRestartReason",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.8",
+            "key": "snmp.ciscovdcrestartreason",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the reason of the most recent restart of the VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcType",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.9",
+            "key": "snmp.ciscovdctype",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object specifies the type of the VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcAdminStatus",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.10",
+            "key": "snmp.ciscovdcadminstatus",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object indicates the administrative status of the VDC. active -- the VDC will be put into active state. suspended -- the VDC will be put into paused state. When the suspended VDC is bening resumed, it will come up with its startup configuration.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFromUnallocatedIntf",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.11",
+            "key": "snmp.ciscovdcfromunallocatedintf",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object specifies the way that interfaces are allocated from the unallocated interface pool. When the value of this object is set to 'allocate', interfaces in the unallocated interface pool will be allocated to a particular VDC on a best-efforts basis. This object always has the value 'noOp' when read.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFeatureSetList",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.12",
+            "key": "snmp.ciscovdcfeaturesetlist",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies whether a specified feature set is enabled for a VDC. If a bit corresponding to a feature set is set to 1, then the specified feature set is enabled. fcoe -- fiber channel over ethernet feature set. fabricPath -- fabric path feature set. fex -- fabric extender feature set. mpls -- multiprotocol label switching feature set. ethernet -- ethernet feature set. virtualization -- virtual machine feature set. fabric -- fabric feature set. fcoeNpv -- fcoe Edge N-Port virtualizer feature set.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResourceTemplate",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.13",
+            "key": "snmp.ciscovdcresourcetemplate",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the name of the resource template of the VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcModuleCapList",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.14",
+            "key": "snmp.ciscovdcmodulecaplist",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies type of modules which are allowed in this VDC. If a bit corresponding to a module type is set to 1, then the specified module type is allowed in the VDC. m1 -- M1 series modules. f1 -- F1 series modules. m1xl -- M1XL series modules. f2 -- F2 series modules. m2xl -- M2XL series modules fc -- Fiber Channel modules f2e -- F2E series modules f3 -- F3 series modules. m3 -- M3 series modules.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcCpuPriority",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.15",
+            "key": "snmp.ciscovdccpupriority",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "3",
+            "description": "This object specifies the CPU priority/share for a particular VDC. A value of -1 means this information is not available.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcCpuSharePercent",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.16",
+            "key": "snmp.ciscovdccpusharepercent",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the CPU share percentage for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResUsageTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcglobalresusagetable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information regarding global resource usage and utilization on the device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResUsageEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcglobalresusageentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "Each row contains information regarding global usage and utilization for a particular resource.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResID",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcglobalresid",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A unique value, greater than zero, that uniquely identifies a type of resource.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResName",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcglobalresname",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the name of the resource on the device.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResUsed",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcglobalresused",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are currently in use.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResUnused",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.4",
+            "key": "snmp.ciscovdcglobalresunused",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are reserved, and currently not in use.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResFree",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.5",
+            "key": "snmp.ciscovdcglobalresfree",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that still remain to be used.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResAvail",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.6",
+            "key": "snmp.ciscovdcglobalresavail",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are available to be allocated.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcGlobalResTotal",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.7",
+            "key": "snmp.ciscovdcglobalrestotal",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the total number of a particular resource.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResUsageTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcresusagetable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information regarding resource usage and utilization for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResUsageEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcresusageentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "Each row contains information regarding the usage and utilization of a particular resource for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResID",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcresid",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A unique value, greater than zero, that uniquely identifies a type of resource.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResMin",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcresmin",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the minimum number of instances of a particular resource that needs to be allocated to a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResMax",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcresmax",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the maximum number of instances of a particular resource that allow to be allocated to a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResUsed",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.4",
+            "key": "snmp.ciscovdcresused",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are currently in use for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResUnused",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.5",
+            "key": "snmp.ciscovdcresunused",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are reserved, and currently not in use for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResAvail",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.6",
+            "key": "snmp.ciscovdcresavail",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the number of instances of a particular resource that are available to be allocated for a particular VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcrestemplatetable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information regarding the resource allocation for VDC resource template.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcrestemplateentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "Each row contains information regarding the allocation of a particluar resource for a particular VDC resource template.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateName",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcrestemplatename",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object indicates the name of the resource template.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateResID",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcrestemplateresid",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A unique value, greater than zero, that can identify a type of resource.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateMin",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcrestemplatemin",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specified the minimum number of instances of a particular resource that are allocated to this VDC template.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateMax",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.4",
+            "key": "snmp.ciscovdcrestemplatemax",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the maximum number of instances of a particular resource that are allocated to this VDC template.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateStorageType",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.5",
+            "key": "snmp.ciscovdcrestemplatestoragetype",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the storage type of a conceptual row in this table.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcResTemplateStatus",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.6",
+            "key": "snmp.ciscovdcrestemplatestatus",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the status of a conceptual row in this table.All writable objects in this row may be modified at any time.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcIfMembershipTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcifmembershiptable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information about VDC interface membership.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcIfMembershipEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcifmembershipentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A conceptual row containing information about VDC interface membership.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcIfMembershipifIndex",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcifmembershipifindex",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "ifIndex of the interface membership of this VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcIfMembershipStorageType",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcifmembershipstoragetype",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the storage type of a conceptual row in this table.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcIfMembershipStatus",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcifmembershipstatus",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the row status of a conceptual row in this table.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFCoEVlansTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcfcoevlanstable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information regarding allocation of VLANs that can be used for FCoE.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFCoEVlansEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcfcoevlansentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A conceptual row containing information regarding allocation of VLANs that can be used for FCoE.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFCoEVlansFirst2K",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcfcoevlansfirst2k",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A string of octets containing one bit per VLAN for VLANs 0 to 2047 that are reserved for FCoE. If the bit corresponding to a VLAN is set to '1', then the VLAN is reserved for FCoE. If the bit is set to '0', then the VLAN is not reserved for FCoE",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFCoEVlansSecond2K",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcfcoevlanssecond2k",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A string of octets containing one bit per VLAN for VLANs 2048 to 4095 that are reserved for FCoE. If the bit corresponding to a VLAN is set to '1', then the VLAN is reserved for FCoE. If the bit is set to '0', then the VLAN is not reserved for FCoE",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcFCoEVlansFromVdc",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcfcoevlansfromvdc",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies which VDCs are going to share ports with the storage VDC.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSharedInterfaceTable",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcsharedinterfacetable",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This table contains information about VDC shared interface membership.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSharedInterfaceEntry",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcsharedinterfaceentry",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A conceptual row containing information about VDC shared interface membership.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSharedInterfaceifIndex",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.1",
+            "key": "snmp.ciscovdcsharedinterfaceifindex",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "A unique value, greater than zero, for each interface.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSharedInterfaceStorageType",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2",
+            "key": "snmp.ciscovdcsharedinterfacestoragetype",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the storage type of a conceptual row in this table",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          },
+          {
+            "name": "ciscoVdcSharedInterfaceRowStatus",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.3",
+            "key": "snmp.ciscovdcsharedinterfacerowstatus",
+            "delay": "5m",
+            "history": "2w",
+            "trends": "365d",
+            "status": "0",
+            "value_type": "4",
+            "description": "This object specifies the row status of a conceptual row in this table.",
+            "applications": [
+              {
+                "name": "CISCO-VDC-MIB"
+              }
+            ],
+            "preprocessing": [],
+            "tags": [
+              {
+                "tag": "mib",
+                "value": "CISCO-VDC-MIB"
+              }
+            ]
+          }
+        ],
+        "discovery_rules": []
+      }
+    ]
+  }
+}
